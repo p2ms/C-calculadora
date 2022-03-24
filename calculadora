@@ -17,10 +17,10 @@ namespace des23
             {
                 Console.Write("Digite um numero: ");
                 num1 = int.Parse(Console.ReadLine());
-                Console.Write("Digite outro numero: ");
-                num2 = int.Parse(Console.ReadLine());
                 Console.Write("Digite a operação(+,-,*,/): ");
                 ope = Console.ReadLine();
+                Console.Write("Digite outro numero: ");
+                num2 = int.Parse(Console.ReadLine());
 
                 if (ope == "+")
                 {
@@ -37,7 +37,11 @@ namespace des23
                     resul = num1 * num2;
                     Console.WriteLine(resul);
                 }
-                if (ope == "/")
+                if(ope == "/" && num2 == 0)
+                {
+                    Console.WriteLine("Não é possivel dividir por zero");
+                }
+                else if (ope == "/")
                 {
                     resul = num1 / num2;
                     Console.WriteLine(resul);
